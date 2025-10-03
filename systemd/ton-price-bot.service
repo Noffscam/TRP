@@ -1,0 +1,16 @@
+[Unit]
+Description=TON RUB Price Bot
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/path/to/repo
+EnvironmentFile=/path/to/repo/.env
+ExecStart=/path/to/repo/.venv/bin/python /path/to/repo/src/bot.py
+Restart=always
+RestartSec=5
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target
